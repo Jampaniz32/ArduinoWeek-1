@@ -1,0 +1,60 @@
+html {
+    font-family: Arial;
+    text-align: center;
+}
+
+h1 {
+    color: #0F3376;
+}
+h2{
+    padding: 0px;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.tit {
+    line-height: 0%;
+}
+
+.button {
+
+    background-color: #008CBA;
+    color: white;
+    padding: 16px;
+    font-size: 30px;
+    cursor: pointer;
+
+
+}
+
+.fset{
+    padding: 30px;
+    width: 550px;
+    margin: 0 auto;
+}
+
+.ft{
+    background-color: #ccc;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.foto{
+    padding-top: 30px;
+}
+
+.est{
+    padding: 30px;
+    border: 1px solid black;
+    width: 500px;
+}
+
+.button2 {
+    background-color: #f44336;
+    color: white;
+    padding: 16px;
+    font-size: 30px;
+    cursor: pointer;
+}
