@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="”en”">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+  <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyB11AGp50qvCSzxPhFPn4-YK2FeyGCFVZ0",
+        authDomain: "arduinoweek-1.firebaseapp.com",
+        projectId: "arduinoweek-1",
+        storageBucket: "arduinoweek-1.appspot.com",
+        messagingSenderId: "321433422812",
+        appId: "1:321433422812:web:fcdb2957117bfb1f295d19",
+        measurementId: "G-PP7DT4N69X"
+        };
+
+        firebase.initializeApp(firebaseConfig)
+
+        function ledOn() {
+            firebase.database().ref('SALA').set({
+               estado: 'LIGADA' 
+            });
+            
+        }
+
+        function ledOff() {
+            firebase.database().ref('SALA').set({
+               estado: 'DESLIGADA' 
+            }); 
+        }
+
+        function ledOn1() {
+            firebase.database().ref('QUARTO-1').set({
+               estado: 'LIGADA' 
+            });  
+        }
+
+        function ledOff1() {
+            firebase.database().ref('QUARTO-1').set({
+               estado: 'DESLIGADA' 
+            });
+        }
+
+        function ledOn2() {
+            firebase.database().ref('QUARTO-2').set({
+               estado: 'LIGADA' 
+            });  
+        }
+
+        function ledOff2() {
+            firebase.database().ref('QUARTO-2').set({
+               estado: 'DESLIGADA' 
+            });
+        }
+
+  </script>
+  <script src="app.js" defer></script>
+  <body>
+    <header>
+        <img src="foto.png" alt="" width="200px" class="foto">
+        <h1>TME Education</h1>
+        <h2>Arduino Week</h2>
+        <h2>Faculdade de Engenharia UEM</h2>
+    </header>
+    <div>
+        <h2>Controlo remoto de iluminação</h2>
+    </div>
+
+    <fieldset class="fset">
+        <legend>Sala</legend>
+        <button class="led-on button" onclick="ledOn()">Ligar</button>
+        <button class="led-off button2" onclick="ledOff()">Desligar</button>
+    </fieldset>
+    <br>
+
+    <fieldset class="fset ">
+        <legend>Quarto-1</legend>
+        <button class="led-on button" onclick="ledOn1()">Ligar</button>
+        <button class="led-off button2" onclick="ledOff1()">Desligar</button>
+    </fieldset>
+    <br>
+
+    <fieldset class="fset">
+        <legend>Quarto-2</legend>
+        <button class="led-on button" onclick="ledOn2()">Ligar</button>
+        <button class="led-off button2" onclick="ledOff2()">Desligar</button>
+    </fieldset>
+
+
+    <footer class="ft">
+        <strong>Jampaniz Abuchir Pira</strong>
+    </footer>
+
+  </body>
+</html>
